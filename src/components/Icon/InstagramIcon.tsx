@@ -1,3 +1,4 @@
+import React from 'react';
 import {FC, memo} from 'react';
 
 import Icon, {IconProps} from './Icon';
@@ -18,5 +19,7 @@ const InstagramIcon: FC<IconProps> = memo(props => (
     />
   </Icon>
 ));
+
+InstagramIcon.displayName = 'InstagramIcon';
 
 export default InstagramIcon;

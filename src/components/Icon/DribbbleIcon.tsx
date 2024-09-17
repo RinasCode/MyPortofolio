@@ -1,5 +1,5 @@
+import React from 'react';
 import {FC, memo} from 'react';
-
 import Icon, {IconProps} from './Icon';
 
 const DribbbleIcon: FC<IconProps> = memo(props => (
@@ -34,5 +34,6 @@ const DribbbleIcon: FC<IconProps> = memo(props => (
     />
   </Icon>
 ));
+DribbbleIcon.displayName = 'DribbbleIcon';
 
 export default DribbbleIcon;

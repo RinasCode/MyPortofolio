@@ -1,6 +1,7 @@
+import React from 'react';
+
 import classNames from 'classnames';
 import {FC, memo, PropsWithChildren} from 'react';
-
 import {SectionId} from '../../data/data';
 
 const Section: FC<
@@ -14,4 +15,5 @@ const Section: FC<
 });
 
 Section.displayName = 'Section';
+
 export default Section;

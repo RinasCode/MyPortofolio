@@ -1,3 +1,4 @@
+import React from 'react';
 import {FC, memo} from 'react';
 
 import Icon, {IconProps} from './Icon';
@@ -10,4 +11,5 @@ const FacebookIcon: FC<IconProps> = memo(props => (
   </Icon>
 ));
 
+FacebookIcon.displayName = 'FacebookIcon';
 export default FacebookIcon;

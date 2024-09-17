@@ -1,3 +1,4 @@
+import React from 'react';
 import {DevicePhoneMobileIcon, EnvelopeIcon, MapPinIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import {FC, memo} from 'react';
@@ -10,6 +11,7 @@ import InstagramIcon from '../../Icon/InstagramIcon';
 import LinkedInIcon from '../../Icon/LinkedInIcon';
 import TwitterIcon from '../../Icon/TwitterIcon';
 import Section from '../../Layout/Section';
+import StackOverflowIcon from '../../Icon/StackOverflowIcon';
 
 const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Email]: {Icon: EnvelopeIcon, srLabel: 'Email'},
@@ -20,6 +22,7 @@ const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Facebook]: {Icon: FacebookIcon, srLabel: 'Facebook'},
   [ContactType.Twitter]: {Icon: TwitterIcon, srLabel: 'Twitter'},
   [ContactType.Instagram]: {Icon: InstagramIcon, srLabel: 'Instagram'},
+  [ContactType.StackOverflow]: {Icon: StackOverflowIcon, srLabel: 'StackOverflow'},
 };
 
 const Contact: FC = memo(() => {

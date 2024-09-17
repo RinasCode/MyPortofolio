@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {FC, memo} from 'react';
 
 import {TimelineItem} from '../../../data/dataDef';

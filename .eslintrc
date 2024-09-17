@@ -8,18 +8,28 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "simple-import-sort", "import", "react", "react-memo", "react-hooks"],
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "import",
+    "react",
+    "react-memo",
+    "react-hooks"
+  ],
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@next/next/recommended",
     "prettier"
   ],
-  "ignorePatterns": ["*/public", "*/node_modules/*", "*/.next/*", "*/dist/*"],
+  "ignorePatterns": [
+    "*/public",
+    "*/node_modules/*",
+    "*/.next/*",
+    "*/dist/*"
+  ],
   "rules": {
     "react/display-name": "off",
-    // The next two rules should be errors. But for now we"ll leave them as warnings since this will take a while
     "react-memo/require-usememo": "error",
     "react-memo/require-memo": "error",
     "react-hooks/rules-of-hooks": "error",
@@ -61,7 +71,8 @@
     {
       "files": ["**/*.tsx"],
       "rules": {
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     },
     {

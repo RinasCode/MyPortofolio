@@ -1,7 +1,9 @@
+import React from 'react';
 import {FC, memo} from 'react';
+import PropTypes from 'prop-types';
 
 export interface IconProps extends React.HTMLAttributes<SVGSVGElement> {
-  svgRef?: React.Ref<SVGSVGElement>;
+  svgRef?: React.Ref<SVGSVGElement>; // Tetap menggunakan Ref di TypeScript
   transform?: string;
 }
 
@@ -18,5 +20,14 @@ const Icon: FC<IconProps> = memo(({children, className, svgRef, transform, ...pr
     {children}
   </svg>
 ));
+
+Icon.displayName = 'Icon';
+
+// Validasi PropTypes hanya untuk prop yang lain, kecuali svgRef
+Icon.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  transform: PropTypes.string,
+};
 
 export default Icon;

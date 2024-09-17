@@ -2,6 +2,7 @@ import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
+import React from 'react';
 
 import {isMobile} from '../../config';
 import {portfolioItems, SectionId} from '../../data/data';
@@ -71,7 +72,8 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
       href={url}
       onClick={handleItemClick}
       ref={linkRef}
-      target="_blank">
+      target="_blank"
+      rel="noreferrer">
       <div className="relative h-full w-full p-4">
         <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
           <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
@@ -82,3 +84,5 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
     </a>
   );
 });
+
+ItemOverlay.displayName = 'ItemOverlay'; // Tambahkan baris ini

@@ -1,3 +1,4 @@
+import React from 'react';
 import 'tailwindcss/tailwind.css';
 import '../globalStyles.scss';
 
@@ -11,5 +12,6 @@ const MyApp = memo(({Component, pageProps}: AppProps): JSX.Element => {
     </>
   );
 });
+MyApp.displayName = 'MyApp';
 
 export default MyApp;

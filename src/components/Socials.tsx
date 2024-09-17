@@ -1,3 +1,4 @@
+import React from 'react';
 import {FC, memo} from 'react';
 
 import {socialLinks} from '../data/data';

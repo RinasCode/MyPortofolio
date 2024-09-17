@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {Dialog, Transition} from '@headlessui/react';
 import {Bars3BottomRightIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
@@ -26,6 +28,7 @@ const Header: FC = memo(() => {
     </>
   );
 });
+Header.displayName = 'Header'; // Tambahkan baris ini
 
 const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}> = memo(
   ({navSections, currentSection}) => {
@@ -50,6 +53,8 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
     );
   },
 );
+
+DesktopNav.displayName = 'DesktopNav'; // Tambahkan baris ini
 
 const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}> = memo(
   ({navSections, currentSection}) => {
@@ -114,6 +119,8 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
   },
 );
 
+MobileNav.displayName = 'MobileNav'; // Tambahkan baris ini
+
 const NavItem: FC<{
   section: string;
   current: boolean;
@@ -132,5 +139,6 @@ const NavItem: FC<{
   );
 });
 
-Header.displayName = 'Header';
-export default Header;
+NavItem.displayName = 'NavItem'; // Tambahkan baris ini
+
+export default {Header, DesktopNav, MobileNav, NavItem}; // Tambahkan baris ini

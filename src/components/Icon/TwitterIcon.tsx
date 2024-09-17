@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {FC, memo} from 'react';
 
 import Icon, {IconProps} from './Icon';
@@ -9,5 +11,6 @@ const TwitterIcon: FC<IconProps> = memo(props => (
       fill="currentColor"></path>
   </Icon>
 ));
+TwitterIcon.displayName = 'TwitterIcon';
 
 export default TwitterIcon;

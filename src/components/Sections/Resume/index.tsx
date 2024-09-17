@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {FC, memo} from 'react';
 
 import {education, experience, SectionId, skills} from '../../../data/data';

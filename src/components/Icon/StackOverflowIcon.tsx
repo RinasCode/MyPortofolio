@@ -1,3 +1,4 @@
+import React from 'react';
 import {FC, memo} from 'react';
 
 import Icon, {IconProps} from './Icon';
@@ -11,5 +12,6 @@ const StackOverflowIcon: FC<IconProps> = memo(props => (
     />
   </Icon>
 ));
+StackOverflowIcon.displayName = 'StackOverflowIcon';
 
 export default StackOverflowIcon;
